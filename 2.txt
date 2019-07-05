@@ -1,0 +1,78 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class Main {
+  
+  public static void main(String[] args) {
+    
+    //BE DB
+    
+    Scanner read = new Scanner(System.in);
+    ArrayList<Vartotojas> myList = new ArrayList<Vartotojas>();
+    
+    //Prideti
+    
+    System.out.println("Iveskite savo varda");
+    String fname = read.nextLine();
+    
+    System.out.println("Iveskite savo pavarde");
+    String lname = read.nextLine();
+    
+    System.out.println("Iveskite savo adresa");
+    String address = read.nextLine();
+    
+    System.out.println("Iveskite savo el. pasta");
+    String mail = read.nextLine();
+  
+    Vartotojas v1 = new Vartotojas(fname,lname,address,mail);
+    myList.add(v1);
+    
+    //Paimti
+    System.out.println("Kuriuos duomenis turite? 1 for Vardas 2 for Pavarde 3 for Mail");
+    int n = read.nextInt();
+    
+    if (n == 1)
+    {
+      System.out.println("Iveskita varda");
+      fname = read.nextLine();
+      for(Vartotojas v : myList)
+      {
+        if (v.getFName() == fname)
+        {
+          System.out.println(v.getFName() + v.getLName() + v.getAddress());
+        }
+      }
+    }
+    
+    if (n == 2)
+    {
+      System.out.println("Iveskita pavarde");
+      lname = read.nextLine();
+      for(Vartotojas v : myList)
+      {
+        if (v.getLName() == lname)
+        {
+          System.out.println(v.getFName() + v.getLName() + v.getAddress());
+        }
+      }
+    }
+    
+    if (n == 3)
+    {
+      System.out.println("Iveskita adresa");
+      address = read.nextLine();
+      for(Vartotojas v : myList)
+      {
+        if (v.getAddress() == address)
+        {
+          System.out.println(v.getFName() + v.getLName() + v.getAddress());
+        }
+      }
+    }
+    
+    if(n != 1 || n!=2 || n!=3)
+    {
+      System.out.println("Skaityti ismokt reikia");
+    }
+  }
+}
