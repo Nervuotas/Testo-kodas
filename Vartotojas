@@ -1,0 +1,47 @@
+class Vartotojas {
+  
+  private String vardas;
+  private String pavarde;
+  private String adresas;
+  private String el_adresas;
+    
+  public Vartotojas(String vard, String pav, String adr, String el_adr){
+        this.vardas = vard;
+        this.pavarde = pav;
+        this.adresas = adr;
+        this.el_adresas = el_adr;
+  }
+ 
+  public String getFName(){
+        return vardas;
+  }
+  
+  public String getLName(){
+        return pavarde;
+  }
+  
+  public String getAddress(){
+        return adresas;
+  }
+  
+  public String getMail(){
+        return el_adresas;
+  }
+  
+  public void setFName(String vardas){
+      this.vardas = vardas;
+  }
+  
+  public void setLName(String pav){
+      this.pavarde = pav;
+  }
+  
+  public void setAddress(String adr){
+      this.adresas = adr;
+  }
+  
+  public void setMail(String mail){
+      this.el_adresas = mail;
+  }
+  
+}
